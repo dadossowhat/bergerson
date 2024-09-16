@@ -99,7 +99,10 @@ data = data.map(function(row, rowIndex) {
     } else if (skuName.indexOf("kit carregador") !== -1) {
       row.push("Kit Carregador");
     } else {
-      row.push("Outros"); 
+      // Caso nenhuma categoria seja encontrada, pega as seis primeiras palavras
+      var words = skuName.split(" "); // Divide a string por espaços
+      var firstSixWords = words.slice(0, 6).join(" "); // Pega até as seis primeiras palavras e junta de volta
+      row.push(firstSixWords || "Outros"); // Se estiver vazio, mantém "Outros"
     }
   }
   return row;
