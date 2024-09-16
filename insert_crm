@@ -98,6 +98,28 @@ data = data.map(function(row, rowIndex) {
       row.push("Porta Passaporte");
     } else if (skuName.indexOf("kit carregador") !== -1) {
       row.push("Kit Carregador");
+    } else if (skuName.indexOf("abotoadura") !== -1) {
+      row.push("Abotoadura");
+    } else if (skuName.indexOf("aliança") !== -1) {
+      row.push("Aliança");
+    } else if (skuName.indexOf("anel") !== -1) {
+      row.push("Anel");
+    } else if (skuName.indexOf("brinco") !== -1) {
+      row.push("Brinco");
+    } else if (skuName.indexOf("colar") !== -1 || skuName.indexOf("cordões") !== -1) {
+      row.push("Colar");
+    } else if (skuName.indexOf("corrente") !== -1) {
+      row.push("Corrente");
+    } else if (skuName.indexOf("gargantilha") !== -1) {
+      row.push("Gargantilha");
+    } else if (skuName.indexOf("piercing") !== -1) {
+      row.push("Piercing");
+    } else if (skuName.indexOf("pingente") !== -1) {
+      row.push("Pingente");
+    } else if (skuName.indexOf("pulseira") !== -1) {
+      row.push("Pulseira");
+    } else if (skuName.indexOf("tornozeleira") !== -1) {
+      row.push("Tornozeleira");
     } else {
       // Caso nenhuma categoria seja encontrada, pega as seis primeiras palavras
       var words = skuName.split(" "); // Divide a string por espaços
@@ -107,6 +129,7 @@ data = data.map(function(row, rowIndex) {
   }
   return row;
 });
+
 
 
       var headers = data[0]; // Assumindo que a primeira linha é o cabeçalho
