@@ -293,4 +293,4 @@ SELECT
 
     case when rn2 = 1 then investimento_midia else null end as investimento_midia
 FROM final_data
-WHERE post_date >= 'date_sub(current_date(), interval 8 day)'
+WHERE post_date >= date_sub(current_date(), interval 8 day)
